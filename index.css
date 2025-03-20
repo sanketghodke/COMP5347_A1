@@ -1,5 +1,6 @@
 ﻿/* general text formatting */
 
+
 h1, h2, h3, nav, footer {
  font-family: Georgia, Cambria, "Times New Roman", serif;
 }
@@ -51,4 +52,127 @@ caption {
       padding: 0.5em 0.5em; 
       font-weight: bold;
       font-size: 1.2em;
+}
+
+.main-heading {
+   align-items: center;
+   font-weight: bolder;
+   font-size: 2em;
+
+}
+
+.navbar {
+   display: flex;
+   align-items: center;
+   background-color: #256ed4;
+   padding: 10px 20px;
+   color: white;
+   justify-content: space-between; /* Pushes left and right sections apart */
+}
+
+.left-section {
+   display: flex;
+   align-items: center;
+   gap: 10px; /* Space between elements */
+}
+
+.right-section {
+   display: flex;
+   align-items: center;
+   gap: 10px; /* Space between buttons */
+}
+
+.navbar input, .navbar button {
+   padding: 8px;
+   border: none;
+   border-radius: 4px;
+}
+
+.navbar input {
+   width: 150px;
+}
+
+.navbar button {
+   background-color: #3b3b3b;
+   color: white;
+   cursor: pointer;
+}
+
+/* Table Styling */
+#book-table {
+   width: 100%;
+   border-collapse: collapse;
+   font-family: Arial, sans-serif;
+}
+
+/* Table Header */
+#book-table thead {
+   font-weight: bold;
+   font-size: large;
+}
+
+/* Table Header Cells */
+#book-table th {
+   padding: 12px;
+   text-align: left;
+   border-bottom: 2px solid #ddd; /* Bottom border for header */
+}
+
+/* Table Rows */
+#book-table tbody th {
+   border-left:none ;
+   border-right:none; /* No row borders */
+}
+
+#book-table tbody tr {
+   border-left:none ;
+   border-right:none; /* No row borders */
+   font-size: large;
+
+}
+
+/* Table Image Styling */
+#book-table td img {
+   width: 100px;
+    height: 150px;
+    border-radius: 5px;
+    padding: 5px; /* Add space around the image */
+    display: block; /* Ensures padding applies correctly */
+}
+
+
+
+
+#book-table tbody tr.highlight {
+   background-color: #a6ffe7; /* Example highlight color */
+}
+
+
+/* Styling for category dropdown, filter button, and reset filter button */
+#categorySelect, #filterButton, #resetFilterButton {
+   padding: 8px;
+   margin-left: 10px;
+   border-radius: 4px;
+   cursor: pointer;
+}
+
+/* Add some spacing between elements */
+.navbar input, .navbar button, #categorySelect, #filterButton, #resetFilterButton {
+   margin-right: 10px;
+}
+
+/* Hover effect for buttons */
+#filterButton:hover, #resetFilterButton:hover, #searchButton:hover {
+   background-color: #ddd;
+}
+
+/* Customize the dropdown appearance */
+#categorySelect {
+   background-color: #f4f4f4;
+   border: 1px solid #ccc;
+}
+
+/* Highlight row when filter is applied */
+#book-table tbody tr {
+   transition: background-color 0.3s ease;
 }

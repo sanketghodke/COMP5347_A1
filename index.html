@@ -1,19 +1,61 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html lang="en">
+<head>
    <meta charset="utf-8">
-   <title>COMP5347 Assignment One</title>
-   <link rel="stylesheet" href="index.css" />
-   <script type="text/javascript" src="index.js"></script>
+   <title>B2YBooks - Online Bookstore</title>
+   <link rel="stylesheet" href="index.css">
+   <script type="text/javascript" src="index.js" defer></script>
 </head>
 <body>
-   <form method="get" action="">
-      <div id="searchBox">
-      
+
+   <nav class="navbar">
+      <div class="left-section">
+         <div class="main-heading">B2YBooks</div>
+
+         <input type="text"  id = "searchBox" placeholder="Search By Title...">
+         <button id="searchButton">Search</button>
+
+         <select id="categorySelect">
+            <option value="">Select Category</option>
+            <option value="Art">Art</option>
+            <option value="Science History">Science History</option>
+            <option value="Action and Adventure">Action and Adventure</option>
+            <option value="Health">Health</option>
+            <option value="Science Fiction">Science Fiction</option>
+            <option value="Other Category">Sports</option>
+         </select>
+
+         <button id="filterButton">Filter</button>
+         <button id="resetFilterButton">Reset Filter</button>
+
+
       </div>
-      <div id="listBox">
-      
-      </div>   
-   </form>
+      <div class="right-section">
+         <button onclick="addToCart()">Add to Cart</button>
+         <button onclick="resetCart()">Reset Cart</button>
+         <div class="cart-icon" onclick="viewCart()">
+            <img src="images/shopping_cart.png" alt="Cart">
+            <span class="cart-count" id="cartCount">0</span>
+         </div>
+      </div>
+   </nav>
+   <table id="book-table">
+      <thead>
+         <tr>
+            <th>Thumbnail</th>
+            <th>Title</th>
+            <th>Authors</th>
+            <th>Year</th>
+            <th>Price</th>
+            <th>Rating</th>
+            <th>Publisher</th>
+            <th>Category</th>
+         </tr>
+      </thead>
+      <tbody>
+         <!-- Books will be dynamically inserted here -->
+      </tbody>
+   </table>
+
 </body>
 </html>
